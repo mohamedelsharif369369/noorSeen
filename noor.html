@@ -1,0 +1,60 @@
+<html>
+    <head>
+       <meta charset='UTF-8'>
+       <title>NOOR</title>
+       <link rel='stylesheet' href='style.css'>
+    </head>
+    <body>
+        <div class='crud'>
+            <div class='head'>
+                <h2>NOOR</h2>
+                <p>PRODUCT MANAGEMENT SYSTEM</p>
+            </div>
+            <div class='inputs'>
+                <input type="text" placeholder="الاسم" id="title">
+                <div class="price">
+                    <input onkeyup="getTotal()" type="number" placeholder="السعر" id="price">
+                    <input onkeyup="getTotal()" type="number" placeholder="الضريبه" id="taxes">
+                    <input onkeyup="getTotal()" type="number" placeholder="الاعلان" id="ads">
+                    <input onkeyup="getTotal()" type="number" placeholder="الخصم" id="discount">
+                    <small id="total">0000</small>
+                </div>
+                <input type="number" placeholder="التكرار" id="count">
+                <input type="number" placeholder="العدد" id="num">
+                <input type="text" placeholder="مشترى" id="category">
+                <button id="submit">أنشاء</button>
+            </div>
+            <div class='outputs'>
+                <div class="searchBlock">
+                    <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="البحث">
+                    <div class="btnSearch">
+                        <button onclick="getSearchMood(this.id)" id="searchTitle">البحث بالاسم</button>
+                        <button onclick="getSearchMood(this.id)" id="searchCategory">البحث بالتصنيف</button>
+                    </div>
+                </div>
+                <div id="deleteAll">
+
+                </div>
+                <table>
+                    <tr>
+                        <th>المسلسل</th>
+                        <th>الاسم</th>
+                        <th>السعر</th>
+                        <th>الضريبه</th>
+                        <th>الاعلان</th>
+                        <th>الخصم</th>
+                        <th>الاجمالى</th>
+                        <th>العدد</th>
+                        <th>مشترى</th>
+                        <th>تعديل</th>
+                        <th>حذف</th>
+                    </tr>
+                    <tbody id="tbody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+       <script src='main.js'></script>
+    </body>
+</html>
